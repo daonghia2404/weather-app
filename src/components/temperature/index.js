@@ -1,9 +1,10 @@
 import React from "react";
+import classNames from "classnames";
 import "./index.scss";
 
-export const Temperature = () => {
+export const Temperature = ({ time }) => {
   return (
-    <div className="temperature">
+    <div className={classNames("temperature", { day: time }, { night: !time })}>
       <div className="number-dergee c-dergee">
         36
         <span>°</span>

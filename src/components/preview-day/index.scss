@@ -1,5 +1,12 @@
+@import "assets/css/variables.scss";
 .preview-days {
   width: 80%;
+  &.day .preview-day {
+    color: $black;
+  }
+  &.night .preview-day {
+    color: $white;
+  }
   .preview-day {
     flex: 0 0 calc(100% / 7);
     max-width: calc(100% / 7);

@@ -1,10 +1,18 @@
-.day {
+@import "assets/css/variables.scss";
+.day-of-week {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 30px;
+  &.day .character {
+    color: $black;
+  }
+  &.night .character {
+    color: $white;
+  }
   .character {
     font-size: 1.8rem;
     text-transform: uppercase;
+    transition: 0.3s ease;
   }
 }

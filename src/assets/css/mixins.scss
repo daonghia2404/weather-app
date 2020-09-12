@@ -1,5 +1,13 @@
+@import "assets/css/variables.scss";
+
 @mixin box-shadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+@mixin box-shadow-day {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+@mixin box-shadow-night {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 @mixin shadow($i, $start, $end) {
@@ -26,11 +34,42 @@
     }
     50% {
       transform: translateX(-30%);
-      opacity: 1;
+      opacity: 0.9;
     }
     100% {
       transform: translateX(0);
       opacity: 0.8;
+    }
+  }
+}
+
+@mixin shadowBackground($time) {
+  @if $time == "day" {
+    animation: shadowBackgroundDay 2s ease infinite;
+  } @else {
+    animation: shadowBackgroundNight 2s ease infinite;
+  }
+
+  @keyframes shadowBackgroundDay {
+    0% {
+      box-shadow: 0 -5px 15px $sun;
+    }
+    50% {
+      box-shadow: 0 -5px 30px $sun;
+    }
+    100% {
+      box-shadow: 0 -5px 15px $sun;
+    }
+  }
+  @keyframes shadowBackgroundNight {
+    0% {
+      box-shadow: 0 -5px 15px $white;
+    }
+    50% {
+      box-shadow: 0 -5px 30px $white;
+    }
+    100% {
+      box-shadow: 0 -5px 15px $white;
     }
   }
 }

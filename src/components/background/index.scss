@@ -8,52 +8,98 @@
   transform: translate(-50%, -50%);
   width: 65rem;
   overflow: hidden;
+
+  &.day {
+    .sunset:before {
+      @include shadowBackground("day");
+    }
+    .shadows .shadow-item {
+      background: linear-gradient(to right, $pale, $sun, $pale);
+    }
+  }
+  &.night {
+    .sunset:before {
+      @include shadowBackground("night");
+    }
+    .shadows .shadow-item {
+      background: linear-gradient(to right, $dark, $moon, $dark);
+    }
+  }
+
   .sunset {
     position: relative;
     z-index: 5;
-    margin-bottom: -85px;
+    height: 398px;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      width: 90%;
+      height: 140%;
+      content: "";
+      transform: translateX(-50%);
+      z-index: -1;
+      border-radius: 50%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
     img {
       width: 100%;
     }
   }
+
   .cloud {
     @include cloud;
     position: absolute;
     z-index: 6;
     top: 70px;
     right: -10px;
+
     img {
       width: 300px;
     }
   }
-  .shadow-item {
-    border-radius: 20px;
-    height: 20px;
-    margin-bottom: 10px;
-    background: linear-gradient(to right, $pale, $sun, $pale);
-    &:nth-of-type(1) {
-      width: 108%;
-      @include shadow(1, 92%, 92%);
-    }
-    &:nth-of-type(2) {
-      width: 98%;
-      @include shadow(2, 92%, 88%);
-    }
-    &:nth-of-type(3) {
-      width: 88%;
-      @include shadow(3, 88%, 78%);
-    }
-    &:nth-of-type(4) {
-      width: 78%;
-      @include shadow(4, 78%, 68%);
-    }
-    &:nth-of-type(5) {
-      width: 68%;
-      @include shadow(5, 68%, 58%);
-    }
-    &:nth-of-type(6) {
-      width: 58%;
-      @include shadow(6, 58%, 48%);
+
+  .shadows {
+    margin-top: -30px;
+
+    .shadow-item {
+      border-radius: 20px;
+      height: 20px;
+      margin-bottom: 10px;
+
+      &:nth-of-type(1) {
+        width: 108%;
+        @include shadow(1, 92%, 92%);
+      }
+
+      &:nth-of-type(2) {
+        width: 98%;
+        @include shadow(2, 92%, 88%);
+      }
+
+      &:nth-of-type(3) {
+        width: 88%;
+        @include shadow(3, 88%, 78%);
+      }
+
+      &:nth-of-type(4) {
+        width: 78%;
+        @include shadow(4, 78%, 68%);
+      }
+
+      &:nth-of-type(5) {
+        width: 68%;
+        @include shadow(5, 68%, 58%);
+      }
+
+      &:nth-of-type(6) {
+        width: 58%;
+        @include shadow(6, 58%, 48%);
+      }
     }
   }
 }

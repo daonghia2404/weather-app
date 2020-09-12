@@ -1,4 +1,17 @@
+@import "assets/css/variables.scss";
 .time {
+  &.day {
+    .date,
+    .time-item {
+      color: $black;
+    }
+  }
+  &.night {
+    .date,
+    .time-item {
+      color: $white;
+    }
+  }
   .date {
     font-size: 18px;
   }

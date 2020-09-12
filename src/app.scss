@@ -1,7 +1,28 @@
 @import "assets/css/mixins.scss";
 
+.app-main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.3s ease;
+  &.day {
+    background: $pale;
+    .app {
+      @include box-shadow-day;
+    }
+  }
+  &.night {
+    background: $dark;
+    .app {
+      @include box-shadow-night;
+    }
+  }
+}
+
 .app {
-  @include box-shadow;
   position: relative;
   width: 90vw;
   height: 90vh;
