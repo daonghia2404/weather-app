@@ -9,16 +9,18 @@
     "classnames": "^2.2.6",
     "husky": "^4.3.0",
     "lint-staged": "^10.3.0",
+    "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.1",
+    "querystringify": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "npm run build:css && react-scripts start",
-    "build": "npm run build:css && react-scripts build",
+    "start": "REACT_APP_API_KEY=55b2d5e7e1eedeea2d08842e6ad79b50 npm run build:css && react-scripts start",
+    "build": "REACT_APP_API_KEY=55b2d5e7e1eedeea2d08842e6ad79b50 npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css"
@@ -40,8 +42,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "dotenv": "^8.2.0",
     "postcss-cli": "^7.1.2",
-    "tailwindcss": "^1.8.8"
+    "tailwindcss": "^1.8.8",
+    "webpack-cli": "^3.3.12"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,scss,md}": [

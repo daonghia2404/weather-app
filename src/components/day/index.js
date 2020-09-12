@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import "./index.scss";
-export const Day = ({ time }) => {
+export const Day = ({ time, data }) => {
   const day = ["s", "u", "n", "d", "a", "y"];
+  useEffect(() => {}, []);
+  const getDayOfWeek = () => {
+    let day = -1;
+    if (data.day) day = data.day();
+    switch (day) {
+      case 0:
+        day = "sunday";
+        break;
+      case 1:
+        day = "monday";
+        break;
+      case 2:
+        day = "tuesday";
+        break;
+      case 3:
+        day = "wednesday";
+        break;
+      case 4:
+        day = "thursday";
+        break;
+      case 5:
+        day = "friday";
+        break;
+      case 6:
+        day = "saturday";
+        break;
+      default:
+        day = "";
+        break;
+    }
+    return day.split("");
+  };
+
   return (
     <div
       className={classNames(
@@ -11,7 +44,7 @@ export const Day = ({ time }) => {
         { night: !time }
       )}
     >
-      {day.map((item, index) => (
+      {getDayOfWeek().map((item, index) => (
         <div className="character" key={index}>
           {item}
         </div>
