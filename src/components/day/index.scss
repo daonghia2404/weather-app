@@ -1,0 +1,10 @@
+.day {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  .character {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+}

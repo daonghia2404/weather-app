@@ -1,0 +1,36 @@
+@mixin box-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@mixin shadow($i, $start, $end) {
+  animation: shadow#{$i} 2s linear infinite;
+
+  @keyframes shadow#{$i} {
+    0% {
+      transform: translateY(0);
+      width: #{$start};
+    }
+    100% {
+      transform: translateY(calc(100% + 10px));
+      width: #{$end};
+    }
+  }
+}
+
+@mixin cloud {
+  animation: cloud 20s ease infinite;
+  @keyframes cloud {
+    0% {
+      transform: translateX(0);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateX(-30%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 0.8;
+    }
+  }
+}

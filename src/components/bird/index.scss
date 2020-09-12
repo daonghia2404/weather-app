@@ -1,0 +1,17 @@
+.bird {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  animation: bird linear infinite;
+  img {
+    width: 100%;
+  }
+  @keyframes bird {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.locations {
+  position: absolute;
+  top: 30%;
+  left: 40px;
+  .location {
+    font-size: 4.8rem;
+    margin-bottom: -10px;
+  }
+  .description {
+    font-size: 22px;
+  }
+}

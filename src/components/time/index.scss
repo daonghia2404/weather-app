@@ -1,0 +1,14 @@
+.time {
+  .date {
+    font-size: 18px;
+  }
+  .time-detail {
+    margin-top: 10px;
+    .time-item {
+      font-size: 4.8rem;
+      &:nth-of-type(1) {
+        margin-bottom: -20px;
+      }
+    }
+  }
+}

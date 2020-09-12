@@ -1,1 +1,22 @@
 @import "assets/css/variables.scss";
+@import "assets/css/mixins.scss";
+@import "assets/css/fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: $pale;
+}
