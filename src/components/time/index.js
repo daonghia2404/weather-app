@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import classNames from "classnames";
-import { formatDate, formatMonth } from "utils/utils-format";
+import { formatDate, formatMonth, unixToTime } from "utils/utils-format";
 import "./index.scss";
 
 export const Time = ({ time }) => {

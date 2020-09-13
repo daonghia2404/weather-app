@@ -7,12 +7,12 @@ export const Temperature = ({ time, data }) => {
   return (
     <div className={classNames("temperature", { day: time }, { night: !time })}>
       <div className="number-dergee c-dergee">
-        {data && kelvinToCelsius(data.temp)}
+        {data && Math.round(kelvinToCelsius(data.temp))}
         <span>°</span>
         <span>C</span>
       </div>
       <div className="number-dergee f-dergee">
-        {data && kelvinToFahrenheit(data.temp)}
+        {data && Math.round(kelvinToFahrenheit(data.temp))}
         <span>°</span>
         <span>F</span>
       </div>

@@ -8,7 +8,7 @@
   transform: translate(-50%, -50%);
   width: 65rem;
   overflow: hidden;
-
+  pointer-events: none;
   &.day {
     .sunset:before {
       @include shadowBackground("day");

@@ -1,6 +1,6 @@
 @import "assets/css/variables.scss";
 .preview-days {
-  width: 80%;
+  width: 100%;
   &.day .preview-day {
     color: $black;
   }
@@ -8,8 +8,8 @@
     color: $white;
   }
   .preview-day {
-    flex: 0 0 calc(100% / 7);
-    max-width: calc(100% / 7);
+    flex: 0 0 calc(100% / 8);
+    max-width: calc(100% / 8);
     border-radius: 10px;
     font-size: 16px;
     text-align: center;

@@ -3,6 +3,7 @@
   left: 0;
   transform: translateX(-100%);
   animation: bird linear infinite;
+  pointer-events: none;
   img {
     width: 100%;
   }

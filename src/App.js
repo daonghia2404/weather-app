@@ -16,6 +16,7 @@ import { Bird } from "components/bird";
 
 const App = () => {
   const [weather, setWeather] = useState({});
+  const [dailyWeather, setDailyWeather] = useState({});
   const [date, setDate] = useState({});
   const [isDay, setIsDay] = useState(false);
   const birds = [
@@ -27,11 +28,17 @@ const App = () => {
   useEffect(() => {
     getWeather();
     getDate();
+    getDailyWeather();
   }, []);
 
   const getWeather = async () => {
     const res = await apiWeather.getByCity(1581129);
     setWeather(res);
+  };
+
+  const getDailyWeather = async () => {
+    const res = await apiWeather.getDailyWeather(1581129);
+    setDailyWeather(res.daily);
   };
 
   const getDate = () => {
@@ -67,7 +74,7 @@ const App = () => {
         ))}
 
         <div className="app-footer flex justify-center">
-          <PreviewDay time={isDay} />
+          <PreviewDay time={isDay} data={dailyWeather} />
         </div>
       </div>
     </div>
