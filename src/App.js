@@ -13,12 +13,15 @@ import { Background } from "components/background";
 import { PreviewDay } from "components/preview-day";
 import { Location } from "components/location";
 import { Bird } from "components/bird";
+import { Loading } from "components/loading";
 
 const App = () => {
   const [weather, setWeather] = useState({});
   const [dailyWeather, setDailyWeather] = useState({});
   const [date, setDate] = useState({});
   const [isDay, setIsDay] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const birds = [
     { size: 70, position: "35%", delay: 2, speed: 10, start: 1 },
     { size: 40, position: "43%", delay: 1, speed: 15, start: 3 },
@@ -26,8 +29,9 @@ const App = () => {
   ];
 
   useEffect(() => {
-    getWeather();
+    setLoading(false);
     getDate();
+    getWeather();
     getDailyWeather();
   }, []);
 
@@ -39,6 +43,7 @@ const App = () => {
   const getDailyWeather = async () => {
     const res = await apiWeather.getDailyWeather(1581129);
     setDailyWeather(res.daily);
+    setLoading(true);
   };
 
   const getDate = () => {
@@ -50,33 +55,36 @@ const App = () => {
   };
   return (
     <div className={classNames("app-main", { day: isDay }, { night: !isDay })}>
-      <div className="app flex flex-col justify-between">
-        <div className="app-header flex justify-between">
-          <Temperature time={isDay} data={weather.main} />
-          <Time time={isDay} data={date} />
+      <Loading time={isDay} loading={loading} />
+      {loading && (
+        <div className="app flex flex-col justify-between">
+          <div className="app-header flex justify-between">
+            <Temperature time={isDay} data={weather.main} />
+            <Time time={isDay} data={date} />
+          </div>
+
+          <Day time={isDay} data={date} />
+
+          <Background time={isDay} />
+
+          <Location time={isDay} data={weather} />
+
+          {birds.map((item, index) => (
+            <Bird
+              key={index}
+              size={item.size}
+              position={item.position}
+              delay={item.delay}
+              speed={item.speed}
+              start={item.start}
+            />
+          ))}
+
+          <div className="app-footer flex justify-center">
+            <PreviewDay time={isDay} data={dailyWeather} />
+          </div>
         </div>
-
-        <Day time={isDay} data={date} />
-
-        <Background time={isDay} />
-
-        <Location time={isDay} data={weather} />
-
-        {birds.map((item, index) => (
-          <Bird
-            key={index}
-            size={item.size}
-            position={item.position}
-            delay={item.delay}
-            speed={item.speed}
-            start={item.start}
-          />
-        ))}
-
-        <div className="app-footer flex justify-center">
-          <PreviewDay time={isDay} data={dailyWeather} />
-        </div>
-      </div>
+      )}
     </div>
   );
 };

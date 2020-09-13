@@ -2,6 +2,10 @@
 .preview-days {
   width: 100%;
   overflow: auto;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
   &.day .preview-day {
     color: $black;
   }
@@ -9,21 +13,18 @@
     color: $white;
   }
   .preview-day {
-    flex: 0 0 15rem;
-    max-width: 15rem;
     border-radius: 10px;
     font-size: 16px;
     text-align: center;
     user-select: none;
     transition: 0.3s ease;
+    line-height: 1.5;
     img {
       pointer-events: none;
       width: 10rem;
     }
     @media (max-width: 1080px) {
       font-size: 14px;
-      flex: 0 0 120px;
-      max-width: 120px;
       img {
         width: 80px;
       }
