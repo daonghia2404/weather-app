@@ -9,18 +9,22 @@
   width: 65rem;
   overflow: hidden;
   pointer-events: none;
+
   &.day {
     .sunset:before {
       @include shadowBackground("day");
     }
+
     .shadows .shadow-item {
       background: linear-gradient(to right, $pale, $sun, $pale);
     }
   }
+
   &.night {
     .sunset:before {
       @include shadowBackground("night");
     }
+
     .shadows .shadow-item {
       background: linear-gradient(to right, $dark, $moon, $dark);
     }
@@ -55,16 +59,16 @@
     @include cloud;
     position: absolute;
     z-index: 6;
-    top: 70px;
+    top: 7rem;
     right: -10px;
 
     img {
-      width: 300px;
+      width: 30rem;
     }
   }
 
   .shadows {
-    margin-top: -30px;
+    margin-top: -3rem;
 
     .shadow-item {
       border-radius: 20px;
@@ -99,6 +103,30 @@
       &:nth-of-type(6) {
         width: 58%;
         @include shadow(6, 58%, 48%);
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    width: 75vw;
+    .sunset {
+      height: 46vw;
+      &:before {
+        top: 80px;
+        height: 155%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    top: 50%;
+  }
+  @media (max-width: 575px) {
+    top: 55%;
+    width: 100vw;
+    .sunset {
+      height: 61vw;
+      &:before {
+        top: 60px;
       }
     }
   }

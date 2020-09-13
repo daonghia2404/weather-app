@@ -43,7 +43,7 @@ export const Bird = ({ size, position, delay, speed, start }) => {
     <div
       className="bird"
       style={{
-        top: position + "px",
+        top: position,
         width: size + "px",
         animationDelay: delay + "s",
         animationDuration: speed + "s",

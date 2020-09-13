@@ -1,5 +1,6 @@
 @import "assets/css/variables.scss";
 .time {
+  margin-top: 10px;
   &.day {
     .date,
     .time-item {
@@ -19,8 +20,9 @@
     margin-top: 10px;
     .time-item {
       font-size: 4.8rem;
+      text-align: right;
       &:nth-of-type(1) {
-        margin-bottom: -20px;
+        margin-bottom: -2rem;
       }
     }
   }

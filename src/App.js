@@ -20,9 +20,9 @@ const App = () => {
   const [date, setDate] = useState({});
   const [isDay, setIsDay] = useState(false);
   const birds = [
-    { size: 70, position: 150, delay: 2, speed: 10, start: 1 },
-    { size: 40, position: 120, delay: 1, speed: 15, start: 3 },
-    { size: 55, position: 135, delay: 2, speed: 8, start: 5 },
+    { size: 70, position: "35%", delay: 2, speed: 10, start: 1 },
+    { size: 40, position: "43%", delay: 1, speed: 15, start: 3 },
+    { size: 55, position: "27%", delay: 2, speed: 8, start: 5 },
   ];
 
   useEffect(() => {

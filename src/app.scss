@@ -5,17 +5,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
   transition: 0.3s ease;
+
   &.day {
     background: $pale;
+
     .app {
       @include box-shadow-day;
     }
   }
+
   &.night {
     background: $dark;
+
     .app {
       @include box-shadow-night;
     }
@@ -28,12 +32,26 @@
   height: 90vh;
   border-radius: 10px;
   overflow: hidden;
+  @media (max-width: 1200px) {
+    width: 100vw;
+    height: 100vh;
+  }
+  @media (max-width: 768px) {
+    min-height: 100vh;
+    height: auto;
+  }
 
   .app-header,
   .app-footer {
-    padding: 40px;
+    padding: 4rem;
+    position: relative;
+    z-index: 2;
   }
+
   .app-footer {
     padding-bottom: 20px;
+    @media (max-width: 575px) {
+      margin-top: 90vw;
+    }
   }
 }

@@ -1,8 +1,8 @@
 @import "assets/css/variables.scss";
 .locations {
   position: absolute;
-  top: 30%;
-  left: 40px;
+  top: 21rem;
+  left: 4rem;
   &.day .location,
   &.day .description {
     color: $black;
@@ -14,7 +14,7 @@
   .location {
     transition: 0.3s ease;
     font-size: 4.8rem;
-    margin-bottom: -10px;
+    margin-bottom: -1rem;
   }
   .description {
     transition: 0.3s ease;
