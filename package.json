@@ -2,11 +2,13 @@
   "name": "react-project-template",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/daonghia2404/weather-app",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "classnames": "^2.2.6",
+    "gh-pages": "^3.1.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.3.0",
     "moment": "^2.27.0",
@@ -24,7 +26,9 @@
     "build": "REACT_APP_API_KEY=55b2d5e7e1eedeea2d08842e6ad79b50 npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css"
+    "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
