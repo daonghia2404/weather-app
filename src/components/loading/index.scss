@@ -7,7 +7,7 @@
   height: 100%;
   z-index: 100;
   transition: 0.5s ease;
-  transition-delay: 2s;
+  transition-delay: 1.8s;
   &.day {
     background: $pale;
   }
@@ -16,6 +16,7 @@
   }
   &.hide {
     opacity: 0;
+    pointer-events: none;
     .main {
       transform: scale(0);
     }
