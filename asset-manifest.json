@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/daonghia2404/weather-app/static/css/main.4b70b48c.chunk.css",
+    "main.js": "/daonghia2404/weather-app/static/js/main.79866f46.chunk.js",
+    "main.js.map": "/daonghia2404/weather-app/static/js/main.79866f46.chunk.js.map",
+    "runtime-main.js": "/daonghia2404/weather-app/static/js/runtime-main.6b15506c.js",
+    "runtime-main.js.map": "/daonghia2404/weather-app/static/js/runtime-main.6b15506c.js.map",
+    "static/css/2.34c0de18.chunk.css": "/daonghia2404/weather-app/static/css/2.34c0de18.chunk.css",
+    "static/js/2.aef5ac92.chunk.js": "/daonghia2404/weather-app/static/js/2.aef5ac92.chunk.js",
+    "static/js/2.aef5ac92.chunk.js.map": "/daonghia2404/weather-app/static/js/2.aef5ac92.chunk.js.map",
+    "index.html": "/daonghia2404/weather-app/index.html",
+    "precache-manifest.d45f91eb6a5877288cb6c9ea314f7d2e.js": "/daonghia2404/weather-app/precache-manifest.d45f91eb6a5877288cb6c9ea314f7d2e.js",
+    "service-worker.js": "/daonghia2404/weather-app/service-worker.js",
+    "static/css/2.34c0de18.chunk.css.map": "/daonghia2404/weather-app/static/css/2.34c0de18.chunk.css.map",
+    "static/css/main.4b70b48c.chunk.css.map": "/daonghia2404/weather-app/static/css/main.4b70b48c.chunk.css.map",
+    "static/js/2.aef5ac92.chunk.js.LICENSE.txt": "/daonghia2404/weather-app/static/js/2.aef5ac92.chunk.js.LICENSE.txt",
+    "static/media/cloud-black.png": "/daonghia2404/weather-app/static/media/cloud-black.608f708a.png",
+    "static/media/cloud-white.png": "/daonghia2404/weather-app/static/media/cloud-white.2466f2ce.png",
+    "static/media/icon-almosphere.png": "/daonghia2404/weather-app/static/media/icon-almosphere.c0a9e633.png",
+    "static/media/icon-cloud-lightning.png": "/daonghia2404/weather-app/static/media/icon-cloud-lightning.b22912b6.png",
+    "static/media/icon-cloud-rain.png": "/daonghia2404/weather-app/static/media/icon-cloud-rain.ea6fbc5a.png",
+    "static/media/icon-cloud-snows.png": "/daonghia2404/weather-app/static/media/icon-cloud-snows.d1d1caf2.png",
+    "static/media/icon-clouds.png": "/daonghia2404/weather-app/static/media/icon-clouds.472b6589.png",
+    "static/media/icon-snow.png": "/daonghia2404/weather-app/static/media/icon-snow.e9f28984.png",
+    "static/media/icon-sun-cloud-rains.png": "/daonghia2404/weather-app/static/media/icon-sun-cloud-rains.166776cf.png",
+    "static/media/icon-sun-cloud.png": "/daonghia2404/weather-app/static/media/icon-sun-cloud.759632b8.png",
+    "static/media/icon-sun.png": "/daonghia2404/weather-app/static/media/icon-sun.40cf9ea0.png",
+    "static/media/moon.png": "/daonghia2404/weather-app/static/media/moon.6a862b85.png",
+    "static/media/sun.png": "/daonghia2404/weather-app/static/media/sun.ab1710bd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b15506c.js",
+    "static/css/2.34c0de18.chunk.css",
+    "static/js/2.aef5ac92.chunk.js",
+    "static/css/main.4b70b48c.chunk.css",
+    "static/js/main.79866f46.chunk.js"
+  ]
+}
