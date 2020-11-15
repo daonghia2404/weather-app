@@ -16,6 +16,7 @@ import { Bird } from "components/bird";
 import { Loading } from "components/loading";
 
 const App = () => {
+  const [time, setTime] = useState(moment());
   const [weather, setWeather] = useState({});
   const [dailyWeather, setDailyWeather] = useState({});
   const [date, setDate] = useState({});
@@ -47,7 +48,6 @@ const App = () => {
   };
 
   const getDate = () => {
-    const time = moment();
     const hour = time.hour();
     if (hour >= 18 || hour <= 6) setIsDay(false);
     else setIsDay(true);
@@ -60,7 +60,7 @@ const App = () => {
         <div className="app flex flex-col justify-between">
           <div className="app-header flex justify-between">
             <Temperature time={isDay} data={weather.main} />
-            <Time time={isDay} data={date} />
+            <Time />
           </div>
 
           <Day time={isDay} data={date} />

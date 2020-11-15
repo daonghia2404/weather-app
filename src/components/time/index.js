@@ -4,14 +4,14 @@ import classNames from "classnames";
 import { formatDate, formatMonth, unixToTime } from "utils/utils-format";
 import "./index.scss";
 
-export const Time = ({ time }) => {
+export const Time = () => {
+  const [time, setTime] = useState(moment());
   const [day, setDay] = useState("");
   const [month, setMonth] = useState("");
   const [hour, setHour] = useState("");
   const [minute, setMinute] = useState("");
 
   useEffect(() => {
-    const time = moment();
     getDay(time);
     getMonth(time);
     getHour(time);
@@ -29,7 +29,7 @@ export const Time = ({ time }) => {
         {month}, {day}
       </div>
       <div className="time-detail text-center">
-        <div className="time-item hour">{hour}</div>
+        <div className="time-item hour">{moment()}</div>
         <div className="time-item minute">{minute}</div>
       </div>
     </div>

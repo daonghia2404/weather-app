@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import "./index.scss";
 export const Day = ({ time, data }) => {
-  const day = ["s", "u", "n", "d", "a", "y"];
   useEffect(() => {}, []);
   const getDayOfWeek = () => {
     let day = -1;
